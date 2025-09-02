@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Список задач Bitrix24</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="header">
+        <div class="header-section" id="header-left">
+            <span>Список задач</span>
+            <span class="header-avatar" id="user-avatar" style="margin-left:10px;"></span>
+        </div>
+        <div class="header-divider"></div>
+        <div class="header-section" id="header-center">
+            <select id="project-filter" class="header-select">
+                <option value="all">Все проекты</option>
+                <option value="none">Без проекта</option>
+                <!-- Другие проекты будут добавлены динамически -->
+            </select>
+            <label class="header-flag"><input type="checkbox" id="show-completed"> в т.ч. завершённые</label>
+        </div>
+        <div class="header-divider"></div>
+        <div class="header-section header-counters" id="header-right">
+            <span>Загружено задач: <span id="loaded">0</span>, отобрано задач: <span id="count">0</span></span>
+            <span id="spinner"><span class="spinner"></span></span>
+        </div>
+    </div>
+    <div id="tasks"></div>
+    <script src="/static/tasks.js"></script>
+</body>
+</html>
